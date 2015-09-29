@@ -1,0 +1,55 @@
+<body>
+<div class="row nav-bcgrnd navbar-fixed-top">
+  <div class="col-lg-2 col-md-1"></div>
+    <div class="col-lg-8 col-md-10">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+          </div>        
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="<?php echo URL::route('home'); ?>">home</a></li>
+              <?php if(Auth::check()): ?>            
+              <li><a href="<?php echo URL::route('groups'); ?>">groups</a></li>
+              <li><a href="<?php echo URL::route('friends'); ?>">friends</a></li>
+              <li><a href="<?php echo URL::route('members'); ?>">members</a></li>                            
+              <li><a href="<?php echo URL::route('account-sign-out'); ?>">logout</a></li>
+              <?php else: ?>
+              <li id="login"><a href="#">login</a></li>
+              <?php endif; ?>
+            </ul>
+              
+            <ul class="nav navbar-nav navbar-right">
+              <li class="form-group">
+                <form class="navbar-form navbar-left" role="search">
+                  <input type="text" class="form-control" placeholder="Search">
+                </form>
+              </li>
+              <?php if(Auth::check()): ?>
+                <li class="notification-1">
+                    <p>requests</p>
+                </li>
+                <li id="inbox" class="notification-2">
+                    <p>notifications</p>
+                </li>
+                <li id="profile" class="notification-3">
+                    <p><?php echo Auth::user()->username; ?></p>
+                </li>
+              <?php endif; ?>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+      </nav>
+    </div>
+  <div class="col-lg-2 col-md-1"></div>
+</div>
+
+<!--/ end of header -->

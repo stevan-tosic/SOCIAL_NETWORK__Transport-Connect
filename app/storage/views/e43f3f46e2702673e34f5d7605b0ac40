@@ -1,0 +1,74 @@
+<!doctype html>
+<?php echo $__env->make('layout.includes.headtag', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('layout.includes.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<div class="divider-divova"></div>
+<div class="divider-divova"></div>
+<div class="divider-divova"></div>
+
+<div class="container">
+	<div class="row">
+<fieldset>
+		<legend>Change Password</legend>
+
+			<form class="form-horizontal" action="<?php echo URL::route('account-change-password-post'); ?>" method="post">
+
+				<div class="form-group">
+						<label for="email" class="col-lg-2 control-label">Old password</label>
+					<div class="col-lg-10">
+						<input type="password"  class="form-control" name="old_pass" placeholder="Enter your old password. . ."
+						<?php echo (Input::old('old_pass')) ? 'value="'. Input::old('old_pass') .'" ' : ''; ?> >
+						<?php if($errors->has('old_pass')): ?>
+							<?php echo $errors->first('old_pass'); ?>
+
+						<?php endif; ?>
+					</div>
+				</div> <br>
+
+				<div class="form-group">
+						<label for="email" class="col-lg-2 control-label">New passsword</label>
+					<div class="col-lg-10">
+						<input type="password"  class="form-control" name="new_pass" placeholder="Enter your new password. . ."
+						<?php echo (Input::old('new_pass')) ? 'value="'. Input::old('new_pass') .'" ' : ''; ?> >
+						<?php if($errors->has('new_pass')): ?>
+							<?php echo $errors->first('new_pass'); ?>
+
+						<?php endif; ?>
+					</div>
+				</div> <br>
+
+    			<div class="form-group">
+      					<label for="password" class="col-lg-2 control-label">Retype password</label>
+      			<div class="col-lg-10">
+        				<input type="password" name="new_pass_again" id="new_pass_again" class="form-control" placeholder="Retype your new password. . .">
+        				<?php if($errors->has('new_pass_again')): ?>
+							<?php echo $errors->first('new_pass_again'); ?>
+
+						<?php endif; ?>
+        			<div class="checkbox">
+          				<label>
+            			<input type="checkbox" id="checkbox" onchange="document.getElementById('new_pass_again').type = this.checked ? 'text' : 'password'">Show password.</input>
+          				</label>
+        			</div>
+      			</div>
+    			</div> <br>
+
+				<div class="form-group">
+	      			<div class="col-lg-10 col-lg-offset-2">
+	        			<button type="reset" class="btn btn-default">Cancel</button>
+	        			<button type="submit" class="btn btn-primary">Change password</button>
+	      			</div>
+	    		</div>
+				<?php echo Form::token(); ?>
+
+			</form>
+
+		</fieldset>
+
+	</div>
+
+</div>
+<div class="divider-divova"></div>
+<div class="divider-divova"></div>
+<div class="divider-divova"></div>
+<?php echo $__env->make('layout.includes.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

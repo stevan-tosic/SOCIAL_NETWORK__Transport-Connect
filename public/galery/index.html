@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title> Stu Nicholls | CSSplay | Cross Browser Multi Page Photograph Gallery</title>
+<meta name="Author" content="Stu Nicholls" />
+
+
+<style type="text/css">
+
+
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menu/lightbox.html
+Copyright (c) 2005-2007 Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+/* common styling */
+
+a {color:#000;}
+a:hover {text-decoration:none;}
+a:visited {color:#000;}
+
+/* slides styling */
+
+.photo {width:635px; text-align:left; position:relative; margin:0 auto;}
+
+.photo ul.topic {padding:0; margin:0; list-style:none; width:635px; height:auto; position:relative; z-index:10;}
+
+.photo ul.topic li {display:block; width:125px; height:31px; float:left;}
+.photo ul.topic li a.set {display:block; font-size:11px; width:124px; height:30px; text-align:center; line-height:30px; color:#000; text-decoration:none; border:1px solid #fff; border-width:1px 1px 0 0; background:#ccc; font-family:verdana, arial, sans-serif;}
+
+.photo ul.topic li a ul, 
+.photo ul.topic li ul 
+{display:none;}
+
+.photo ul.topic li.active a
+{color:#000; background:#bbb;}
+
+.photo ul.topic li a:hover,
+.photo ul.topic li:hover a
+{color:#fff; background:#aaa;}
+
+.photo ul.topic li.active ul
+{display:block; position:absolute; left:0; top:31px; list-style:none; padding:0; margin:0; height:375px; background:#ddd; width:464px; padding:40px 60px; border:20px solid #bbb; z-index:1;}
+
+.photo ul.topic li a:hover ul, 
+.photo ul.topic li:hover ul
+{display:block; position:absolute; left:0; top:31px; list-style:none; padding:0; margin:0; height:375px; background:#ddd; width:464px; padding:40px 60px; border:20px solid #aaa; z-index:100;}
+
+.photo ul.topic li ul li
+{display:inline; width:112px; height:87px; float:left; border:1px solid #fff; margin:1px;}
+
+.photo ul.topic li ul li a
+{display:block; width:110px; height:85px; cursor:default; float:left; text-decoration:none; background:#444; border:1px solid #888;}
+
+.photo ul.topic li ul li a img
+{display:block; width:100px; height:75px; border:5px solid #eee;}
+
+.photo ul.topic li a:hover ul li a:hover, 
+.photo ul.topic li:hover ul li a:hover 
+{white-space:normal; position:relative;}
+
+.photo ul.topic li a:hover ul li a:hover img, 
+.photo ul.topic li:hover ul li a:hover img 
+{position:absolute; left:-50px; top:-32px; width:200px; height:150px; border-color:#fff;}
+</style>
+
+
+</head>
+
+<body>
+
+<div class="photo">
+<ul class="topic">
+	<li><a class="set" href="#Portraits">Portraits<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul>
+			<li><a href="lbox/portrait1.jpg"><img src="http://www.cssplay.co.uk/menu/lbox/portrait1a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/portrait2.jpg"><img src="lbox/portrait2a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/portrait3.jpg"><img src="lbox/portrait3a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/portrait4.jpg"><img src="lbox/portrait4a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/portrait5.jpg"><img src="lbox/portrait5a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/portrait6.jpg"><img src="lbox/portrait6a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/portrait7.jpg"><img src="lbox/portrait7a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/portrait8.jpg"><img src="lbox/portrait8a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/portrait9.jpg"><img src="lbox/portrait9a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/portrait10.jpg"><img src="lbox/portrait10a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/portrait11.jpg"><img src="lbox/portrait11a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/portrait12.jpg"><img src="lbox/portrait12a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/portrait13.jpg"><img src="lbox/portrait13a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/portrait14.jpg"><img src="lbox/portrait14a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/portrait15.jpg"><img src="lbox/portrait15a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/portrait16.jpg"><img src="lbox/portrait16a.jpg" alt="" title="" /></a></li>
+		</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+
+	<li class="active"><a class="set" href="#Landscapes">Landscapes<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul>
+			<li><a href="lbox/landscape1.jpg"><img src="http://www.cssplay.co.uk/menu/lbox/landscape1a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/landscape2.jpg"><img src="lbox/landscape2a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/landscape3.jpg"><img src="lbox/landscape3a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/landscape4.jpg"><img src="lbox/landscape4a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/landscape5.jpg"><img src="lbox/landscape5a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/landscape6.jpg"><img src="lbox/landscape6a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/landscape7.jpg"><img src="lbox/landscape7a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/landscape8.jpg"><img src="lbox/landscape8a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/landscape9.jpg"><img src="lbox/landscape9a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/landscape10.jpg"><img src="lbox/landscape10a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/landscape11.jpg"><img src="lbox/landscape11a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/landscape12.jpg"><img src="lbox/landscape12a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/landscape13.jpg"><img src="lbox/landscape13a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/landscape14.jpg"><img src="lbox/landscape14a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/landscape15.jpg"><img src="lbox/landscape15a.jpg" alt="" title="" /></a></li>
+			<li><a href="lbox/landscape16.jpg"><img src="lbox/landscape16a.jpg" alt="" title="" /></a></li>
+		</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	<li><a class="set" href="#Flowers">Flowers<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul>
+			<li><a href="#flower1"><img src="http://www.cssplay.co.uk/menu/lbox/flower1.jpg" alt="" title="" /></a></li>
+			<li><a href="#flower2"><img src="lbox/flower2.jpg" alt="" title="" /></a></li>
+			<li><a href="#flower3"><img src="lbox/flower3.jpg" alt="" title="" /></a></li>
+			<li><a href="#flower4"><img src="lbox/flower4.jpg" alt="" title="" /></a></li>
+			<li><a href="#flower5"><img src="lbox/flower5.jpg" alt="" title="" /></a></li>
+			<li><a href="#flower6"><img src="lbox/flower6.jpg" alt="" title="" /></a></li>
+			<li><a href="#flower7"><img src="lbox/flower7.jpg" alt="" title="" /></a></li>
+			<li><a href="#flower8"><img src="lbox/flower8.jpg" alt="" title="" /></a></li>
+			<li><a href="#flower9"><img src="lbox/flower9.jpg" alt="" title="" /></a></li>
+			<li><a href="#flower10"><img src="lbox/flower10.jpg" alt="" title="" /></a></li>
+			<li><a href="#flower11"><img src="lbox/flower11.jpg" alt="" title="" /></a></li>
+			<li><a href="#flower12"><img src="lbox/flower12.jpg" alt="" title="" /></a></li>
+			<li><a href="#flower13"><img src="lbox/flower13.jpg" alt="" title="" /></a></li>
+			<li><a href="#flower14"><img src="lbox/flower14.jpg" alt="" title="" /></a></li>
+			<li><a href="#flower15"><img src="lbox/flower15.jpg" alt="" title="" /></a></li>
+			<li><a href="#flower16"><img src="lbox/flower16.jpg" alt="" title="" /></a></li>
+		</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+
+	</li>
+	<li><a class="set" href="#Trees">Trees<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul>
+			<li><a href="#tree1"><img src="http://www.cssplay.co.uk/menu/lbox/tree1.jpg" alt="" title="" /></a></li>
+			<li><a href="#tree1"><img src="lbox/tree2.jpg" alt="" title="" /></a></li>
+			<li><a href="#tree1"><img src="lbox/tree3.jpg" alt="" title="" /></a></li>
+			<li><a href="#tree1"><img src="lbox/tree4.jpg" alt="" title="" /></a></li>
+			<li><a href="#tree1"><img src="lbox/tree5.jpg" alt="" title="" /></a></li>
+			<li><a href="#tree1"><img src="lbox/tree6.jpg" alt="" title="" /></a></li>
+			<li><a href="#tree1"><img src="lbox/tree7.jpg" alt="" title="" /></a></li>
+			<li><a href="#tree1"><img src="lbox/tree8.jpg" alt="" title="" /></a></li>
+			<li><a href="#tree1"><img src="lbox/tree9.jpg" alt="" title="" /></a></li>
+			<li><a href="#tree1"><img src="lbox/tree10.jpg" alt="" title="" /></a></li>
+			<li><a href="#tree1"><img src="lbox/tree11.jpg" alt="" title="" /></a></li>
+			<li><a href="#tree1"><img src="lbox/tree12.jpg" alt="" title="" /></a></li>
+			<li><a href="#tree1"><img src="lbox/tree13.jpg" alt="" title="" /></a></li>
+			<li><a href="#tree1"><img src="lbox/tree14.jpg" alt="" title="" /></a></li>
+			<li><a href="#tree1"><img src="lbox/tree15.jpg" alt="" title="" /></a></li>
+			<li><a href="#tree1"><img src="lbox/tree16.jpg" alt="" title="" /></a></li>
+		</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	<li><a class="set" href="#Birds">Birds<!--[if gte IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+		<ul>
+			<li><a href="#bird1"><img src="http://www.cssplay.co.uk/menu/lbox/bird1.jpg" alt="" title="" /></a></li>
+			<li><a href="#bird2"><img src="lbox/bird2.jpg" alt="" title="" /></a></li>
+			<li><a href="#bird3"><img src="lbox/bird3.jpg" alt="" title="" /></a></li>
+			<li><a href="#bird4"><img src="lbox/bird4.jpg" alt="" title="" /></a></li>
+			<li><a href="#bird5"><img src="lbox/bird5.jpg" alt="" title="" /></a></li>
+			<li><a href="#bird6"><img src="lbox/bird6.jpg" alt="" title="" /></a></li>
+			<li><a href="#bird7"><img src="lbox/bird7.jpg" alt="" title="" /></a></li>
+			<li><a href="#bird8"><img src="lbox/bird8.jpg" alt="" title="" /></a></li>
+			<li><a href="#bird9"><img src="lbox/bird9.jpg" alt="" title="" /></a></li>
+			<li><a href="#bird10"><img src="lbox/bird10.jpg" alt="" title="" /></a></li>
+			<li><a href="#bird11"><img src="lbox/bird11.jpg" alt="" title="" /></a></li>
+			<li><a href="#bird12"><img src="lbox/bird12.jpg" alt="" title="" /></a></li>
+			<li><a href="#bird13"><img src="lbox/bird13.jpg" alt="" title="" /></a></li>
+			<li><a href="#bird14"><img src="lbox/bird14.jpg" alt="" title="" /></a></li>
+			<li><a href="#bird15"><img src="lbox/bird15.jpg" alt="" title="" /></a></li>
+			<li><a href="#bird16"><img src="lbox/bird16.jpg" alt="" title="" /></a></li>
+		</ul>
+
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+</ul>
+<br class="clear" />
+</div>
+
+
+</body>
+</html>

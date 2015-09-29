@@ -1,0 +1,7 @@
+<?php $__env->startSection('content'); ?>
+	<form action="<?php echo URL::route('account-create-post'); ?>" method="post">
+		<input type="submit" value="Create account">
+
+	</form>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

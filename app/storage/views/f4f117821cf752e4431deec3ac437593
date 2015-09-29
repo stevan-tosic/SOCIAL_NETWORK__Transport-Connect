@@ -1,0 +1,13 @@
+<head>
+<link rel="shorcut icon" href="images/logo-footer.png">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Transport Connect</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/custom.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script language="JavaScript" src="<?php echo URL::asset('js/1.11.2jquery.min.js'); ?>"></script>
+
+	<?php echo $__env->make('js.JavaScript', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	
+</head>

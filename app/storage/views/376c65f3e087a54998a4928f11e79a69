@@ -1,0 +1,7 @@
+---<br><br>
+Message from <?php echo $email; ?>.<br>
+Username <?php echo $name; ?><br><br>
+<?php echo $text; ?>
+
+<br><br>
+---

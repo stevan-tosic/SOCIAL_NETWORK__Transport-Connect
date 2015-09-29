@@ -1,0 +1,58 @@
+<?php $__env->startSection('content'); ?>
+	<div class="form-container" style="width:400px">
+		<fieldset>
+    	<legend>Suggestion</legend>
+
+			<form class="form-horizontal" action="<?php echo URL::route('suggestion-post'); ?>" method="post">
+				
+				<div class="form-group">
+	      				<label for="email" class="col-lg-2 control-label">Email</label>
+	      			<div class="col-lg-10">
+	        			<input type="text" class="form-control" name="email" placeholder="Enter your email"
+	        			<?php echo (Input::old('email')) ? 'value="'. Input::old('email') .'" ' : ''; ?> >
+	        			<?php if($errors->has('email')): ?>
+							<?php echo $errors->first('email'); ?>
+
+						<?php endif; ?>
+	      			</div>
+	    		</div>
+
+	    		<div class="form-group">
+	      				<label for="username" class="col-lg-2 control-label">Username</label>
+	      			<div class="col-lg-10">
+	        			<input type="text" class="form-control" name="username" placeholder="Enter your username"
+	        			<?php echo (Input::old('username')) ? 'value="'. Input::old('username') .'" ' : ''; ?> >
+	        			<?php if($errors->has('username')): ?>
+							<?php echo $errors->first('username'); ?>
+
+						<?php endif; ?>
+	      			</div>
+	    		</div>
+
+	    		<div class="form-group">
+	      				<label for="textArea" class="col-lg-2 control-label">Suggestion</label>
+	      			<div class="col-lg-10">
+	        			<textarea class="form-control" rows="3" name="textArea" placeholder="Enter your text here. . ."><?php echo (Input::old('textArea')); ?></textarea>
+	        			<?php if($errors->has('textArea')): ?>
+							<?php echo $errors->first('textArea'); ?>
+
+						<?php endif; ?>
+	        			<span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+	      			</div>
+	    		</div>
+
+	    		<div class="form-group">
+	      			<div class="col-lg-10 col-lg-offset-2">
+	        			<button type="reset" class="btn btn-default">Cancel</button>
+	        			<button type="submit" class="btn btn-primary">Submit</button>
+	      			</div>
+	    		</div>
+
+				<?php echo Form::token(); ?>
+
+			</form>
+		</fieldset>
+	</div>
+    
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

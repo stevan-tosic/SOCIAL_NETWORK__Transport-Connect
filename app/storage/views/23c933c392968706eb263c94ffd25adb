@@ -1,0 +1,43 @@
+<?php $__env->startSection('content'); ?>
+	<?php if(Auth::check()): ?>
+		<p>Hello, <?php echo Auth::user()->username; ?>.</p>
+	<?php else: ?>
+		<p>You are not signed in.</p>
+	<?php endif; ?>
+
+	<div>
+		<blockquote>
+  			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  			<small>Someone famous in <cite title="Source Title">Home page</cite></small>
+		</blockquote>			
+	</div>
+	<button class="btn btn-danger" id="hide">Hide text</button><br><br><br>
+	<div class="jumbotron" id="b2">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor fermentum dolor in faucibus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam ornare lectus vel leo rutrum tempus. Vivamus dolor nisi, consequat eu auctor nec, tempus pharetra sapien. Aliquam ultrices, eros sed porta aliquet, elit ligula venenatis eros, eu porta ante sapien vitae tellus. In hac habitasse platea dictumst. Donec sollicitudin libero vel semper dignissim. Curabitur eros leo, sagittis mollis tempor et, facilisis vitae diam. Phasellus nec odio rutrum, tristique diam sed, dapibus nisl.
+
+Proin venenatis nibh in velit molestie suscipit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vel est sit amet sapien lobortis porta. Quisque ornare ultrices enim vehicula auctor. Sed nec eros risus. Suspendisse potenti. Integer sollicitudin finibus magna, id pulvinar ligula euismod et. Etiam tincidunt volutpat purus eget ultrices. In hac habitasse platea dictumst. Donec gravida dolor id malesuada facilisis.
+
+Fusce quis ante tortor. Proin mattis neque tortor. Ut sit amet magna sollicitudin, pretium nulla et, aliquet sapien. Ut aliquet dolor non lectus fermentum, ac ornare massa consequat. Nullam tempus tortor quis velit vulputate, ac fringilla orci ullamcorper. Nunc porttitor, felis eu eleifend facilisis, massa velit consectetur augue, sit amet volutpat ipsum sem vitae leo. Vestibulum eget libero eu orci lobortis vehicula. Duis fringilla maximus ultrices. Morbi et tempus lacus, ut fringilla libero. Maecenas nibh augue, dictum in lacus id, hendrerit sollicitudin purus. Morbi et vestibulum arcu, feugiat hendrerit lectus. In hac habitasse platea dictumst. Proin at efficitur arcu. Nunc nulla lectus, ultricies eu ornare ac, dapibus at arcu.
+
+Maecenas rhoncus augue ipsum. Phasellus quis malesuada magna, vel scelerisque odio. Donec ac fringilla purus, eget dapibus leo. Vestibulum auctor, neque ornare hendrerit egestas, orci velit pretium metus, sed commodo ante diam sed mauris. Vivamus pharetra suscipit purus, id suscipit purus pellentesque in. Pellentesque rutrum et enim a elementum. Vivamus tempus nibh quis urna varius dapibus eget ac augue. Morbi sit amet fermentum odio. Vivamus ut suscipit sapien. Vivamus finibus nisl id vulputate malesuada. Mauris feugiat bibendum nisi, vestibulum mattis neque luctus in. Fusce sed magna nec sem dignissim vehicula at ac quam.
+
+Cras turpis tortor, condimentum ac consequat sed, porttitor vitae magna. Vestibulum at elit orci. Sed nec urna diam. Maecenas sit amet dui tortor. Sed blandit sagittis porttitor. Suspendisse in orci vitae lectus aliquet accumsan vel at libero. Nulla facilisi. Nam lobortis enim scelerisque, placerat nisl ac, malesuada tortor. Nam velit urna, accumsan id vehicula mattis, fermentum id sem. Donec nec est elit. Sed sed tincidunt urna, id ultricies risus. Cras eu arcu diam.
+		</p>
+	</div>
+	<div>
+		<button class="btn btn-danger ajaxA">AJAX A</button>
+		<button style="margin: 20px"class="btn btn-danger ajaxB">AJAX B</button>
+		<button class="btn btn-danger ajaxC">Project in progress</button>
+
+		<br><br>
+
+		<br>
+	<div class="jumbotron">
+		<div style="margin:-50px -50px -50px 0px"class="img"><img src="/images/ajax_loader_blue_32.gif" /></div> 
+		<div class="div1">Da li ovo radi?</div>
+
+		
+	</div>
+	</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

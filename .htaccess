@@ -1,0 +1,7 @@
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^transport\.hire\-me\.in\.rs$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.transport\.hire\-me\.in\.rs$
+RewriteRule ^/?$ "http\:\/\/hire\-me\.in\.rs\/transport\/index\.html" [R=301,L]
+

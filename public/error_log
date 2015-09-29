@@ -1,0 +1,16 @@
+[30-Mar-2015 23:35:45 Europe/Belgrade] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/hiremein/public_html/transport/public/proces.php:3
+Stack trace:
+#0 /home/hiremein/public_html/transport/public/proces.php(3): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 {main}
+  thrown in /home/hiremein/public_html/transport/public/proces.php on line 3
+[31-Mar-2015 13:46:34 Europe/Belgrade] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/hiremein/public_html/transport/public/proces.php:3
+Stack trace:
+#0 /home/hiremein/public_html/transport/public/proces.php(3): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 {main}
+  thrown in /home/hiremein/public_html/transport/public/proces.php on line 3
+[31-Mar-2015 13:57:07 Europe/Belgrade] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/hiremein/public_html/transport/public/proces.php:3
+Stack trace:
+#0 /home/hiremein/public_html/transport/public/proces.php(3): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 {main}
+  thrown in /home/hiremein/public_html/transport/public/proces.php on line 3
+[05-Apr-2015 05:54:46 UTC] PHP Fatal error:  Class 'Friendships' not found in /home/hiremein/public_html/transport/app/controllers/HomeController.php on line 18

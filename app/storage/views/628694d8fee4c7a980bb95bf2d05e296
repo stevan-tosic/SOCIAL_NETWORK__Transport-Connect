@@ -1,0 +1,28 @@
+ <div id="Succes_msg_log" class="login-heading">
+        ALREADY A MEMBER? PLEASE LOGIN!
+        <?php if(Session::has('global')): ?>
+        <p><?php echo Session::get('global'); ?></p>
+
+        <?php endif; ?>
+      </div> 
+          <form class="login-form" id="log_form" action="<?php echo URL::route('account-sign-in-post'); ?>" method="post">
+
+            <input id="email" type="text" class="input-type" name="email" placeholder="Username. . ."
+            <?php echo (Input::old('email')) ? 'value="'. Input::old('email') .'" ' : ''; ?> >
+            <?php if($errors->has('email')): ?>
+              <?php echo $errors->first('email'); ?>
+
+            <?php endif; ?>
+
+            <input id="password" type="password" class="input-type" name="password" placeholder="Your Password. . ."
+            <?php echo (Input::old('password')) ? 'value="'. Input::old('password') .'" ' : ''; ?> >
+            <?php if($errors->has('password')): ?>
+              <?php echo $errors->first('password'); ?>
+
+            <?php endif; ?>
+
+            <button style="margin: 15px 0px 0px 0px" type="submit" class="btn btn-default">LOGIN</button>
+            <span style="color:red" class="logResponse"></span>
+          <?php echo Form::token(); ?>
+
+          </form>

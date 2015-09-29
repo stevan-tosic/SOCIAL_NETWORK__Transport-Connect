@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Authentiucation system</title>
+		<script language="JavaScript" src="<?php echo URL::asset('bootstrap/js/jquery-2.1.0.min.js'); ?>"></script>
+		<script language="JavaScript" src="<?php echo URL::asset('bootstrap/js/jjquery.validate.min.js'); ?>"></script>
+		<script language="JavaScript" src="<?php echo URL::asset('bootstrap/js/index.js'); ?>"></script>
+		<link rel="stylesheet" href="<?php echo URL::asset('bootstrap/css/CyborgTheme/cyborg.min.css'); ?>">	
+		<link rel="stylesheet" href="<?php echo URL::asset('css/tablet.css'); ?>">	
+	</head>	
+	<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+		<div style="float:right" class="fb-like-box" data-href="https://www.facebook.com/kawaH2r?fref=ts" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="true"></div>
+	<div class="container">
+		<div class="div">										
+			<?php echo $__env->make('layout.navigation', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+				<?php if(Session::has('global')): ?>
+				<div class="jumbotron">
+	  				<h1>Good! Wery good!
+	  				</h1>
+	  					<p><?php echo Session::get('global'); ?></p>
+	  					<p><a class="btn btn-primary btn-lg">Learn more</a></p>	  					
+				</div>
+				<?php endif; ?>
+			<?php echo $__env->yieldContent('content'); ?>
+		</div>
+	</div>
+	</body>
+</html>

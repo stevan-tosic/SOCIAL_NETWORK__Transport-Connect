@@ -1,0 +1,66 @@
+<!doctype html>
+<?php echo $__env->make('layout.includes.headtag', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('layout.includes.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<!--/ row teget -->
+
+
+
+<!--/ main text -->
+<div class="divider-divova"></div>
+<div class="divider-divova"></div>
+<div class="divider-divova"></div>
+
+<div class="container">
+<div class="row">
+
+   
+   <div>
+                    	<h2>GROUPS</h2>
+
+    <?php foreach($groups->slice(0,6) as $grupa): ?>
+          <div class="col-lg-4 well">
+            <div class="home-section">
+                <div class="group-title"> <?php echo $grupa->groupname; ?></div>
+                <div class="inner-content">
+                 <a href="profile-user-<?php echo $grupa->getGroupCreator(); ?>"> <div class="notification-4">
+                  <p ><?php echo $grupa->getGroupCreator(); ?> </p></a>
+                </div>
+                <p style="padding:39px"><?php echo str_limit(Grouptopics::find(1)->message, $limit = 110, $end = '...'); ?></p>
+
+                </div>
+                <div class="inner-content">
+                 </div>
+                <div class="inner-content"></div>
+                <div class="row groups-footer">
+                    <div class="col-lg-5">
+                    	<h4 class="membernum"><?php echo $grupa->getMembersNumber(); ?> Members </h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-5">
+                    	<button  type="button" data-groupid="<?php echo $grupa->id; ?>"  data-userid="<?php echo Auth::user()->id; ?>" data-value="<?php echo $grupa->buttonValue(); ?>" class="joinGroup btn btn-default btn-xs hidden-edit"><?php echo $grupa->buttonValue(); ?></button>
+                    </div>
+                 </div>
+            </div>
+          </div>
+<?php endforeach; ?>                
+                
+   </div>
+    
+    
+   
+</div>
+
+  <div class="row"> 
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4">
+  <span class="btn btn-default align-center">LOAD MORE</span>
+  </div>
+  <div class="col-lg-4"></div>
+  
+  </div>
+  <div class="divider-divova"></div>
+</div>
+
+<!--/end main text -->
+<?php echo $__env->make('layout.includes.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

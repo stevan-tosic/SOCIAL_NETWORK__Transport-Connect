@@ -1,0 +1,17 @@
+<?php echo Form::open(array('url'=>'submit-file-upld','files'=>true)); ?>
+
+  
+<?php echo Form::label('file','Upload your File',array('id'=>'','class'=>'')); ?>
+
+<?php echo Form::file('file','',array('id'=>'','class'=>'')); ?>
+
+  <br/>
+  <!-- submit buttons -->
+<?php echo Form::submit('Save'); ?>
+
+  
+  <!-- reset buttons -->
+<?php echo Form::reset('Reset'); ?>
+
+  
+<?php echo Form::close(); ?>
